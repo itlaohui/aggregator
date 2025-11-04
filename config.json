@@ -1,0 +1,35 @@
+{
+    "domains": [
+        {
+            "name": "example-airport",
+            "domain": "example.com",
+            "push_to": ["free"]
+        }
+    ],
+    "crawl": {
+        "enable": true,
+        "telegram": {
+            "enable": true,
+            "users": {
+                "proxy_channel": {
+                    "push_to": ["free"]
+                }
+            }
+        }
+    },
+    "groups": {
+        "free": {
+            "targets": {"clash": "free-clash"}
+        }
+    },
+    "storage": {
+        "engine": "gist",
+        "items": {
+            "free-clash": {
+                "username": "itlaohui",
+                "gistid": "ceac6c67074c674bb0b6b4d47839f109", 
+                "filename": "clash.yaml"
+            }
+        }
+    }
+}
