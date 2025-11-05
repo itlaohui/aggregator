@@ -50,7 +50,10 @@ jobs:
         run: pip3 install -r requirements.txt
 
       - name: Collect
-        run: python subscribe/process.py -s config.json
+        run: python subscribe/collect.py --skip --num 128 --chuck -g ${{ secrets.GIST_LINK }} -k ${{ secrets.PUSH_TOKEN }} -t clash v2ray singbox
+        
+      - name: CheckinTest
+        run: python subscribe/process.py -s config.json --check --num 128
 
       - name: Timestamp
         run: date
