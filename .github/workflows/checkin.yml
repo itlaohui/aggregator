@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Checkin Script
         run: |
-          python ./.github/actions/checkin/universal.py || echo "Checkin script failed"
+          python -u subscribe/process.py -s config.json --check
 
       - name: Record Timestamp
         run: date "+%Y-%m-%d %H:%M:%S"
