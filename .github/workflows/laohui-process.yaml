@@ -50,7 +50,7 @@ jobs:
         run: pip3 install -r requirements.txt
 
       - name: Collect
-        run: python -u subscribe/collect.py --all --overwrite --skip
+        run: python -u subscribe/collect.py -g ${{ secrets.GIST_LINK }} -k ${{ secrets.PUSH_TOKEN }}
 
       - name: Run Checkin Script
         run: |
