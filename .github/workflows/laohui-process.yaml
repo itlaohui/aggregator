@@ -50,7 +50,7 @@ jobs:
         run: pip3 install -r requirements.txt
 
       - name: Collect
-        run: python -u subscribe/collect.py -g ${{ secrets.GIST_LINK }} -k ${{ secrets.PUSH_TOKEN }}
+        run: python -u subscribe/collect.py -g ${{ secrets.GIST_LINK }} -k ${{ secrets.PUSH_TOKEN }} -t clash v2ray singbox
 
       - name: Run Checkin Script
         run: |
