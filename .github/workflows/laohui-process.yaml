@@ -49,7 +49,7 @@ jobs:
       - name: Install
         run: pip3 install -r requirements.txt
 
-      - name: Process
+      - name: Collect
         run: python subscribe/process.py -s config.json
 
       - name: Timestamp
