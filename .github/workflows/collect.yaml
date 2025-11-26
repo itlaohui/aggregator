@@ -65,7 +65,7 @@ jobs:
           fi
 
       - name: Collect
-        run: python -u subscribe/collect.py -g ${{ secrets.GIST_LINK }} -k ${{ secrets.GIST_PAT }} --easygoing --overwrite --skip --num 128 -t clash v2ray singbox
+        run: python -u subscribe/collect.py -g ${{ secrets.GIST_LINK }} -k ${{ secrets.GIST_PAT }} --easygoing --overwrit --num 32 --chuck --url http://www.apple.com/library/test/success.html -t clash v2ray singbox
 
       - name: Timestamp
         run: date
